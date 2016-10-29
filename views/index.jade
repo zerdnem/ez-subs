@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 ez subs
+    p subtitle provider is opensubtitles.org, will add more soon
+    form(class='form' action='/' method='POST')
+        input(type='text' placeholder='mr robot s02e06' name='subFilename'
+        required)
+        select(name='subLanguage')
+            each lang in langs
+                option= lang
+        button(type='submit') Submit
